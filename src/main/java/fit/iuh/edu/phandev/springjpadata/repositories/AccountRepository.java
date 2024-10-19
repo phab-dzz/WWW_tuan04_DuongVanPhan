@@ -9,5 +9,8 @@ import java.util.List;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Account, Long>{
-    List<Account> findByAmountGreaterThan(double amount, Pageable pageable);
+    public List<Account> findByAmountGreaterThan(double amount, Pageable pageable);
+
+
+
 }

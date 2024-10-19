@@ -17,4 +17,8 @@ public class AccountServices {
         return accountRepository.findByAmountGreaterThan(amount,pageable);
 
     }
+    public  Account saveAccount(Account account){
+        return accountRepository.save(account);
+    }
+
 }

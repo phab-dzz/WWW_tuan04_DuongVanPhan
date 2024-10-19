@@ -23,5 +23,10 @@ public class AccountResource {
         PageRequest pageRequest = PageRequest.of(0, 10);
         return accountServices.getbyAmount(amount,pageRequest);
     }
+    @PostMapping("add")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Account saveAccounts(@RequestBody Account account){
+        return accountServices.saveAccount(account);
+    }
 
 }
